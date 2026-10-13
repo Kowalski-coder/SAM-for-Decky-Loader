@@ -1,0 +1,11 @@
+{
+  "name": "SAM",
+  "author": "viktor",
+  "flags": [],
+  "api_version": 1,
+  "publish": {
+    "tags": ["utility", "tools", "games"],
+    "description": "Steam Achievement Manager (SAM) для Steam Deck с интеллектуальной защитой от бана.",
+    "image": "https://deckyloader.ru/store/images/sam.png"
+  }
+}
