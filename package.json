@@ -1,6 +1,6 @@
 {
   "name": "SAM",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "Steam Achievement Manager plugin for Steam Deck (Decky Loader)",
   "scripts": {

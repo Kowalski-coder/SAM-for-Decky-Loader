@@ -228,7 +228,7 @@ class Plugin:
         if self.steamclient_path:
             env["SAM_STEAMCLIENT_PATH"] = self.steamclient_path
 
-        cmd = [self.sam_binary_path, "--stealth"] + args
+        cmd = [self.sam_binary_path] + args
         try:
             proc = await asyncio.create_subprocess_exec(
                 *cmd,

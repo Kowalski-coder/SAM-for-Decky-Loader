@@ -5,7 +5,11 @@ PLUGIN_NAME="SAM"
 ZIP_NAME="${PLUGIN_NAME}.zip"
 
 echo "🔨 Сборка фронтенда..."
-pnpm run build
+if command -v pnpm >/dev/null 2>&1; then
+  pnpm run build
+else
+  npm run build
+fi
 
 echo "📦 Формирование структуры релиза..."
 rm -rf /tmp/${PLUGIN_NAME} ${ZIP_NAME}
@@ -31,5 +35,5 @@ mv /tmp/${ZIP_NAME} ./
 # Создаем также совместимый алиас SAMDeck.zip на случай старых путей
 cp "${ZIP_NAME}" "SAMDeck.zip"
 
-echo "✅ Релизный архив плагина готов: ${ZIP_NAME} (версия 1.0.0)"
+echo "✅ Релизный архив плагина готов: ${ZIP_NAME} (версия 1.0.1)"
 sha256sum "${ZIP_NAME}"
